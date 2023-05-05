@@ -7,12 +7,12 @@ export const Navbar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="bg-white shadow-lg">
+    <nav className="bg-white shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
             <a>
-              <img className="h-8 w-8" src="/logo.svg" alt="Logo" />
+              <img className="h-8 w-8" src="/logo.svg" alt="fake" />
             </a>
           </div>
           <div className="hidden sm:block sm:ml-6">
@@ -69,7 +69,7 @@ export const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className={`${isOpen ? "block" : "hidden"} sm:hidden`}>
+      <div className={`${isOpen ? "block" : "hidden"} sm:hidden `}>
         <div className="px-2 pt-2 pb-3 space-y-1">
           <a className="text-gray-700 hover:text-indigo-700 block px-3 py-2 rounded-md text-base font-medium">
             Home
