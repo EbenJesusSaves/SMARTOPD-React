@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import logo from "../images/smartlogo.webp";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,24 +9,39 @@ export const Navbar = () => {
 
   return (
     <nav className="bg-white shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-24">
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
             <a>
-              <img className="h-8 w-8" src="/logo.svg" alt="fake" />
+              <img className="h-10 w-30" src={logo} alt="fake" />
             </a>
           </div>
-          <div className="hidden sm:block sm:ml-6">
-            <div className="flex space-x-4">
-              <a className="text-gray-700 hover:text-indigo-700 px-3 py-2 rounded-md text-sm font-medium">
+          <div className="hidden sm:block justify-center pt-3 sm:ml-6">
+            <div className="flex  space-x-4">
+              <a className="text-gray-700 hover:text-indigo-700 px-3 py-2 rounded-md text-lg font-bold">
                 Home
               </a>
-              <a className="text-gray-700 hover:text-indigo-700 px-3 py-2 rounded-md text-sm font-medium">
-                About
+              <a className="text-gray-700 hover:text-indigo-700 px-3 py-2 rounded-md text-lg font-bold">
+                About Us
               </a>
-              <a className="text-gray-700 hover:text-indigo-700 px-3 py-2 rounded-md text-sm font-medium">
+              <a className="text-gray-700 hover:text-indigo-700 px-3 py-2 rounded-md text-lg font-bold">
                 Contact
               </a>
+              <a className="text-gray-700 hover:text-indigo-700 px-3 py-2 rounded-md text-lg font-bold">
+                Health Plan
+              </a>
+              <a className="text-gray-700 hover:text-indigo-700 px-3 py-2 rounded-md text-lg font-bold">
+                Blog
+              </a>
+              <a className="text-gray-700 hover:text-indigo-700 px-3 py-2 rounded-md text-lg font-bold">
+                Log in
+              </a>
+              <button
+                className="bg-main-bg font-semibold text-white font-[Poppins] py-2 rounded-lg w-[96px]   hover:bg-main-bg
+    duration-500"
+              >
+                Sign up
+              </button>
             </div>
           </div>
           <div className="-mr-2 flex items-center sm:hidden">
@@ -69,9 +85,9 @@ export const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className={`${isOpen ? "block" : "hidden"} sm:hidden `}>
-        <div className="px-2 pt-2 pb-3 space-y-1">
-          <a className="text-gray-700 hover:text-indigo-700 block px-3 py-2 rounded-md text-base font-medium">
+      <div className={`${isOpen ? "block " : "hidden"} sm:hidden `}>
+        <div className="px-2  pb-3 space-y-2  ">
+          <a className="text-gray-700 text  hover:text-indigo-700 block px-3 py-2 rounded-md text-base font-medium">
             Home
           </a>
           <a className="text-gray-700 hover:text-indigo-700 block px-3 py-2 rounded-md text-base font-medium">

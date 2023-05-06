@@ -10,10 +10,35 @@
 
 .mainPage {
   background-image: url('./images/imageBackround.png');
-  background-size: cover;
+  background-size: contain;
 
   background-repeat: no-repeat;
   height: auto;
 
+
+}
+
+@media screen and (max-width: 800px) {
+  .mainPage {
+    background-image: url('./images/imageBackround.png');
+    background-size: cover;
+    height: 15rem !important;
+    background-color: aqua;
+    background-repeat: no-repeat;
+    height: auto;
+
+
+  }
+}
+
+
+
+
+.download {
+
+  background-image: url('./images/lowerThird.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 
 }

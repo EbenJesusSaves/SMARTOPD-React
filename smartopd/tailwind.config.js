@@ -2,6 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    container: {
+      center: true,
+    },
+    fontFamily: { brandFont: ["Inter", "sans-serif"] },
+
     extend: {
       backgroundColor: {
         "main-bg": "#FF0065",
