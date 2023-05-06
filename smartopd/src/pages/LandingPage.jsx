@@ -12,8 +12,8 @@ export const LandingPage = () => {
       <div className="flex justify-center content-center  ">
         <div className="container flex  justify-center align-middle  mainPage">
           <div className="container flex justify-start  mx-6 md:w-2/3 lg:h-[48rem] my-10 md:my-0 lg:pt-[10rem] text-white">
-            <div>
-              <h1 className=" xl:text-6xl lg:text-4xl text-center lg:text-start  font-semibold font-brandFont md:text-2xl ">
+            <div className="">
+              <h1 className=" xl:text-6xl lg:text-4xl text-center xl:text-start  font-semibold font-brandFont md:text-2xl ">
                 The digital health consultation platform just for you{" "}
               </h1>
               <p className="font-semibold md:text-xl my-3 hidden md:block md:my-10">
@@ -26,12 +26,12 @@ export const LandingPage = () => {
               <Button>Get Started</Button>
             </div>
           </div>
-          <div className="container  flex justify-start align-middle mx-6 hidden md:block w-1/2 text-white"></div>
+          <div className="container  flex justify-start align-middle mx-6 hidden xl:block w-1/2 text-white"></div>
         </div>
       </div>
       <div className="container-fluid flex font-brandFont flex-col  justify-center content-center">
         <div className=" ">
-          <h1 className="text-5xl text-center font-bold">
+          <h1 className="text-2xl mt-5 md:text-5xl md:mt-0 text-center font-bold">
             Thousands of doctors at your beck and call
           </h1>
           <p className="mt-10 font-brandFont  text-center ">
@@ -43,13 +43,13 @@ export const LandingPage = () => {
         <div className="mt-10 flex justify-center ">
           <div className="container flex justify-center   ">
             <div className="flex  flex-wrap content-center justify-center">
-              <div className="flex gap-5">
+              <div className="flex gap-5 flex-wrap w-[25rem] md:w-[40rem] lg:w-auto justify-center">
                 <div className="h-[200px] w-[250px] bg-fuchsia-600">hi</div>
                 <div className="h-[200px] w-[250px] bg-fuchsia-600">hi</div>
                 <div className="h-[200px] w-[250px] bg-fuchsia-600">hi</div>
                 <div className="h-[200px] w-[250px] bg-fuchsia-600">hi</div>
               </div>
-              <div className="flex gap-5 mt-5 ">
+              <div className="flex gap-5 mt-5 flex-wrap w-[25rem] md:w-[40rem] lg:w-auto justify-center ">
                 <div className="h-[200px] w-[250px] bg-fuchsia-600">hi</div>
                 <div className="h-[200px] w-[250px] bg-fuchsia-600">hi</div>
                 <div className="h-[200px] w-[250px] bg-fuchsia-600">hi</div>
@@ -71,9 +71,9 @@ export const LandingPage = () => {
           </p>
         </div>{" "}
         <div className="flex justify-center  ">
-          <div className="flex w-[60%] mt-10 justify-center content-center">
-            <div className="w-1/2">
-              <div>
+          <div className="flex w-[60%] mt-10 justify-center flex-wrap-reverse content-center ">
+            <div className="w-auto md:w-1/2">
+              <div className="">
                 <h4 className="font-brandFont mb-4 font-bold">
                   Doctor Home Visit
                 </h4>
@@ -111,17 +111,17 @@ export const LandingPage = () => {
                 </p>
               </div>
             </div>
-            <div className="w-1/2">
-              <img src={doctorImg} width="382px" />{" "}
+            <div className="w-auto md:w-1/2">
+              <img src={doctorImg} className="md:shrink-0" width="382px" />{" "}
             </div>
           </div>
         </div>
-        <div className="flex justify-center mt-20 ">
-          <div className="flex  mt-10 justify-center gap-20 content-center">
-            <div className="w-1/2">
-              <img src={doctorPatient} width="620px" />{" "}
+        <div className="flex justify-center mt-20  ">
+          <div className="flex  mt-10 justify-center flex-wrap md:flex-nowrap flex-row gap-20 w-[80%] ">
+            <div className="w-auto md:w-1/2">
+              <img src={doctorPatient} className="md:shrink-0" width="620px" />{" "}
             </div>
-            <div className="w-1/2">
+            <div className="w-auto md:w-1/2">
               <div>
                 <p className="font-brandFont mb-3 ">HOME VISITS</p>
                 <h4 className="font-brandFont mb-4 font-bold text-lg">
@@ -158,8 +158,8 @@ export const LandingPage = () => {
           </div>
         </div>
         <div className="flex justify-center mt-20 ">
-          <div className="flex  mt-10 justify-center gap-20 content-center">
-            <div className="w-1/2">
+          <div className="flex  mt-10 justify-center flex-wrap-reverse w-[80%]  md:flex-nowrap gap-20 content-center">
+            <div className="w-auto md:w-1/2">
               <div>
                 <p className="font-brandFont mb-3 ">TELEMEDICINE</p>
                 <h4 className="font-brandFont mb-4 font-bold text-lg">
@@ -182,18 +182,18 @@ export const LandingPage = () => {
               </div>
             </div>
 
-            <div className="w-1/2">
+            <div className="w-auto md:w-1/2">
               <img src={doctorOne} width="620px" />{" "}
             </div>
           </div>
         </div>
         <div className="flex justify-center mt-20 ">
-          <div className="flex  mt-10 justify-center gap-20 content-center">
-            <div className="w-1/2">
+          <div className="flex  mt-10 justify-center gap-20 md:flex-nowrap flex-wrap w-[80%] md:w-[100%] content-center">
+            <div className=" md:w-1/2 ">
               <img src={pharmacy} width="620px" />{" "}
             </div>
 
-            <div className="w-1/2">
+            <div className="md:w-1/2">
               <div>
                 <p className="font-brandFont mb-3 ">ONLINE PHARMACY</p>
                 <h4 className="font-brandFont mb-4 font-bold text-lg">
@@ -212,9 +212,9 @@ export const LandingPage = () => {
             </div>
           </div>
         </div>
-        <div className="download lg:h-[30rem] my-20 flex items-center justify-center">
-          <div className="w-1/2   "></div>
-          <div className="w-1/2  flex flex-col ">
+        <div className="download lg:h-[30rem] my-20 flex items-center  justify-center">
+          <div className="w-auto md:w-1/2   "></div>
+          <div className="w-auto md:w-1/2 flex flex-col ">
             <div className="  rounded ml-10">
               <h4 className="font-brandFont text-xl text-white font-bold mb-4 ">
                 Your Doctor On The Go
