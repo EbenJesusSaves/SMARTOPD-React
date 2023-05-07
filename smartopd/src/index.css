@@ -9,7 +9,7 @@
 
 
 .mainPage {
-  background-image: url('./images/imageBackround.png');
+  background-image: url('./images/backgroundImage.jpg');
   background-size: contain;
 
   background-repeat: no-repeat;
@@ -20,7 +20,7 @@
 
 @media screen and (max-width: 800px) {
   .mainPage {
-    background-image: url('./images/imageBackround.png');
+    background-image: url('./images/backgroundImage.jpg');
     background-size: cover;
     height: 15rem !important;
     background-color: aqua;

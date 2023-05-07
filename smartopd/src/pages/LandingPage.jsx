@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Button } from "../utils/Button";
 import doctorImg from "../images/ddd.png";
 import doctorPatient from "../images/one.jpg";
 import doctorOne from "../images/call.jpg";
 import pharmacy from "../images/two.jpg";
 import downloadApp from "../images/playStore.png";
+
+import { motion } from "framer-motion";
 
 import { GiHypodermicTest } from "react-icons/gi";
 import { GrBaby } from "react-icons/gr";
@@ -15,11 +17,17 @@ import { MdFamilyRestroom } from "react-icons/md";
 import { BsHeartPulse } from "react-icons/bs";
 
 export const LandingPage = () => {
+  const scrollRef = useRef(null);
+
   return (
-    <div className="container-fluid">
-      <div className="flex justify-center content-center  ">
+    <div
+      className="container-fluid"
+      ref={scrollRef}
+      style={{ overflow: "scroll" }}
+    >
+      <div className="flex justify-center content-center scroll-smooth ">
         <div className="container flex  justify-center align-middle  mainPage">
-          <div className="container flex justify-start  mx-6 md:w-2/3 lg:h-[48rem] my-10 md:my-0 lg:pt-[10rem] text-white">
+          <div className="container flex justify-start cursor-pointer  mx-6 md:w-2/3 lg:h-[48rem] my-10 md:my-0 lg:pt-[10rem] text-white">
             <div className="">
               <h1 className=" xl:text-6xl lg:text-4xl text-center xl:text-start  font-semibold font-brandFont md:text-2xl ">
                 The digital health consultation platform just for you{" "}
@@ -37,7 +45,12 @@ export const LandingPage = () => {
           <div className="container  flex justify-start align-middle mx-6 hidden xl:block w-1/2 text-white"></div>
         </div>
       </div>
-      <div className="container-fluid flex font-brandFont flex-col  justify-center content-center">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ root: scrollRef }}
+        className="container-fluid flex font-brandFont flex-col  justify-center content-center"
+      >
         <div className=" ">
           <h1 className="text-2xl mt-5 md:text-5xl md:mt-0 text-center font-bold">
             Thousands of doctors at your beck and call
@@ -68,7 +81,13 @@ export const LandingPage = () => {
                   </p>
                   <p className="text-center font-bold">Pediatrics</p>
                 </div>
-                <div className="h-[150px] flex flex-col  justify-center items-center w-[200px] bg-transparent shadow-xl rounded-lg">
+                <motion.div
+                  whileHover={{
+                    scale: 0.9,
+                    scaleZ: 1.1,
+                  }}
+                  className="h-[150px] flex flex-col  justify-center items-center w-[200px] bg-transparent shadow-xl rounded-lg"
+                >
                   <p className="justify-center flex mb-2 content-center bg-purple-200  h-10 w-10 rounded-full items-center">
                     <RiHospitalLine
                       className="text-center"
@@ -77,7 +96,7 @@ export const LandingPage = () => {
                     />{" "}
                   </p>
                   <p className="text-center font-bold">General Practice</p>
-                </div>
+                </motion.div>
                 <div className="h-[150px] flex flex-col  justify-center items-center w-[200px] bg-transparent shadow-xl rounded-lg">
                   <p className="justify-center flex mb-2 content-center bg-green-200  h-10 w-10 rounded-full items-center">
                     <CgGirl className="text-center" size="30" color="#00960c" />{" "}
@@ -126,7 +145,7 @@ export const LandingPage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
       <div className="container mt-20 ">
         <div className=" ">
           <h1 className="text-5xl text-center font-bold">Our Service</h1>
