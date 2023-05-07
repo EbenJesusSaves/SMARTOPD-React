@@ -1,10 +1,18 @@
 import React from "react";
 import { Button } from "../utils/Button";
-import doctorImg from "../images/doctor.png";
-import doctorPatient from "../images/doctorPatient.png";
-import doctorOne from "../images/doctor0.png";
-import pharmacy from "../images/kingSame.png";
+import doctorImg from "../images/ddd.png";
+import doctorPatient from "../images/one.jpg";
+import doctorOne from "../images/call.jpg";
+import pharmacy from "../images/two.jpg";
 import downloadApp from "../images/playStore.png";
+
+import { GiHypodermicTest } from "react-icons/gi";
+import { GrBaby } from "react-icons/gr";
+import { RiHospitalLine } from "react-icons/ri";
+import { RiWaterFlashLine } from "react-icons/ri";
+import { CgGirl } from "react-icons/cg";
+import { MdFamilyRestroom } from "react-icons/md";
+import { BsHeartPulse } from "react-icons/bs";
 
 export const LandingPage = () => {
   return (
@@ -40,26 +48,86 @@ export const LandingPage = () => {
             advice
           </p>
         </div>
-        <div className="mt-10 flex justify-center ">
+        <div className="mt-10 flex justify-center bg-[#F5F9FF] p-20 ">
           <div className="container flex justify-center   ">
             <div className="flex  flex-wrap content-center justify-center">
-              <div className="flex gap-5 flex-wrap w-[25rem] md:w-[40rem] lg:w-auto justify-center">
-                <div className="h-[200px] w-[250px] bg-fuchsia-600">hi</div>
-                <div className="h-[200px] w-[250px] bg-fuchsia-600">hi</div>
-                <div className="h-[200px] w-[250px] bg-fuchsia-600">hi</div>
-                <div className="h-[200px] w-[250px] bg-fuchsia-600">hi</div>
+              <div className="flex gap-5 flex-wrap w-[30rem] md:w-[50rem] lg:w-auto justify-center">
+                <div className="h-[150px] flex flex-col  justify-center items-center w-[200px] bg-transparent shadow-xl rounded-lg">
+                  <p className="justify-center flex mb-2 content-center bg-violet-200  h-10 w-10 rounded-full items-center">
+                    <GiHypodermicTest
+                      className="text-center"
+                      size="30"
+                      color="#ff0ade"
+                    />{" "}
+                  </p>
+                  <p className="text-center font-bold">Dermatology</p>
+                </div>
+                <div className="h-[150px] flex flex-col  justify-center items-center w-[200px] bg-transparent shadow-xl rounded-lg">
+                  <p className="justify-center flex mb-2 content-center bg-lime-100  h-10 w-10 rounded-full items-center">
+                    <GrBaby className="text-center" size="30" color="#7bff00" />{" "}
+                  </p>
+                  <p className="text-center font-bold">Pediatrics</p>
+                </div>
+                <div className="h-[150px] flex flex-col  justify-center items-center w-[200px] bg-transparent shadow-xl rounded-lg">
+                  <p className="justify-center flex mb-2 content-center bg-purple-200  h-10 w-10 rounded-full items-center">
+                    <RiHospitalLine
+                      className="text-center"
+                      size="30"
+                      color="#3730a3"
+                    />{" "}
+                  </p>
+                  <p className="text-center font-bold">General Practice</p>
+                </div>
+                <div className="h-[150px] flex flex-col  justify-center items-center w-[200px] bg-transparent shadow-xl rounded-lg">
+                  <p className="justify-center flex mb-2 content-center bg-green-200  h-10 w-10 rounded-full items-center">
+                    <CgGirl className="text-center" size="30" color="#00960c" />{" "}
+                  </p>
+                  <p className="text-center font-bold">Gynecology</p>
+                </div>
               </div>
-              <div className="flex gap-5 mt-5 flex-wrap w-[25rem] md:w-[40rem] lg:w-auto justify-center ">
-                <div className="h-[200px] w-[250px] bg-fuchsia-600">hi</div>
-                <div className="h-[200px] w-[250px] bg-fuchsia-600">hi</div>
-                <div className="h-[200px] w-[250px] bg-fuchsia-600">hi</div>
-                <div className="h-[200px] w-[250px] bg-fuchsia-600">hi</div>
+              <div className="flex gap-5 mt-5 flex-wrap w-[30rem] md:w-[50rem] lg:w-auto justify-center ">
+                <div className="h-[150px] flex flex-col  justify-center items-center w-[200px] bg-transparent shadow-xl rounded-lg">
+                  <p className="justify-center flex mb-2 content-center bg-cyan-200  h-10 w-10 rounded-full items-center">
+                    <CgGirl className="text-center" size="30" color="#3730a3" />{" "}
+                  </p>
+                  <p className="text-center font-bold">Optometry</p>
+                </div>
+                <div className="h-[150px] flex flex-col  justify-center items-center w-[200px] bg-transparent shadow-xl rounded-lg">
+                  <p className="justify-center flex mb-2 content-center bg-indigo-200  h-10 w-10 rounded-full items-center">
+                    <MdFamilyRestroom
+                      className="text-center"
+                      size="30"
+                      color="#9900ff"
+                    />{" "}
+                  </p>
+                  <p className="text-center font-bold">Family Medicine</p>
+                </div>
+                <div className="h-[150px] flex flex-col  justify-center items-center w-[200px] bg-transparent shadow-xl rounded-lg">
+                  <p className="justify-center flex mb-2 content-center bg-rose-200  h-10 w-10 rounded-full items-center">
+                    <RiWaterFlashLine
+                      className="text-center"
+                      size="30"
+                      color="#aa0047"
+                    />{" "}
+                  </p>
+                  <p className="text-center font-bold">Endocrinology</p>
+                </div>
+                <div className="h-[150px] flex flex-col  justify-center items-center w-[200px] bg-transparent shadow-xl rounded-lg">
+                  <p className="justify-center flex mb-2 content-center bg-pink-300  h-10 w-10 rounded-full items-center">
+                    <BsHeartPulse
+                      className="text-center"
+                      size="30"
+                      color="#3730a3"
+                    />{" "}
+                  </p>
+                  <p className="text-center font-bold">Cardiology</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="container mt-20">
+      <div className="container mt-20 ">
         <div className=" ">
           <h1 className="text-5xl text-center font-bold">Our Service</h1>
           <p className="mt-10 font-brandFont text-center ">
@@ -112,14 +180,22 @@ export const LandingPage = () => {
               </div>
             </div>
             <div className="w-auto md:w-1/2">
-              <img src={doctorImg} className="md:shrink-0" width="382px" />{" "}
+              <img
+                src={doctorImg}
+                className="md:shrink-0 rounded-xl shadow-md hover:shadow-xl"
+                width="382px"
+              />{" "}
             </div>
           </div>
         </div>
         <div className="flex justify-center mt-20  ">
           <div className="flex  mt-10 justify-center flex-wrap md:flex-nowrap flex-row gap-20 w-[80%] ">
             <div className="w-auto md:w-1/2">
-              <img src={doctorPatient} className="md:shrink-0" width="620px" />{" "}
+              <img
+                src={doctorPatient}
+                className="md:shrink-0 shadow-xl rounded-lg"
+                width="620px"
+              />{" "}
             </div>
             <div className="w-auto md:w-1/2">
               <div>
@@ -138,7 +214,7 @@ export const LandingPage = () => {
                   our house call services to suit your needs. Book your
                   appointment today.
                 </p>
-                <div className="bg-[#E6E6E6] rounded p-4">
+                <div className="bg-[#E6E6E6] shadow-md rounded p-4">
                   <h4 className="font-brandFont text-[#FF0065] font-bold">
                     Covid concerns?💡
                   </h4>
@@ -183,14 +259,22 @@ export const LandingPage = () => {
             </div>
 
             <div className="w-auto md:w-1/2">
-              <img src={doctorOne} width="620px" />{" "}
+              <img
+                src={doctorOne}
+                width="620px"
+                className="md:shrink-0 shadow-xl rounded-lg"
+              />{" "}
             </div>
           </div>
         </div>
         <div className="flex justify-center mt-20 ">
           <div className="flex  mt-10 justify-center gap-20 md:flex-nowrap flex-wrap w-[80%] md:w-[100%] content-center">
             <div className=" md:w-1/2 ">
-              <img src={pharmacy} width="620px" />{" "}
+              <img
+                src={pharmacy}
+                width="620px"
+                className="md:shrink-0 shadow-xl rounded-lg"
+              />{" "}
             </div>
 
             <div className="md:w-1/2">
