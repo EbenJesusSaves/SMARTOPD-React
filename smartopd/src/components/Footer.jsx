@@ -71,7 +71,7 @@ export const Footer = () => {
           <a className="font-brandFont">Our Company</a>
         </div>
         <div>
-          <a className="font-brandFont">VirtualCare in the News</a>
+          <a className="font-brandFont">SmartOPD in the News</a>
         </div>
         <div>
           <a className="font-brandFont">Individual Heath Plan</a>
@@ -118,8 +118,7 @@ export const Footer = () => {
         </div>
         <div>
           <a className="font-brandFont">
-            contact@virtualcare.com <br />
-            info@virtualcare.com
+            Contact details: contact@smartopd.com <br></br>info@smartopd.com
           </a>
         </div>
       </div>

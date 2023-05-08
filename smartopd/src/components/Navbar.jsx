@@ -33,15 +33,22 @@ export const Navbar = () => {
               <a className="text-gray-700 hover:text-indigo-700 px-3 py-2 rounded-md text-lg font-bold">
                 Blog
               </a>
-              <a className="text-gray-700 hover:text-indigo-700 px-3 py-2 rounded-md text-lg font-bold">
-                Log in
-              </a>
-              <button
-                className="bg-main-bg font-semibold text-white font-[Poppins] py-2 rounded-lg w-[96px]   hover:bg-main-bg
-    duration-500"
+              <Link
+                to="/login"
+                className="text-gray-700 hover:text-indigo-700 px-3 py-2 rounded-md text-lg font-bold"
               >
-                Sign up
-              </button>
+                Log in
+              </Link>
+
+              <Link to="/signup">
+                {" "}
+                <button
+                  className="bg-main-bg font-semibold text-white font-[Poppins] py-2 rounded-lg w-[96px]   hover:bg-main-bg
+    duration-500"
+                >
+                  Sign up
+                </button>
+              </Link>
             </div>
           </div>
           <div className="-mr-2 flex items-center sm:hidden">
@@ -96,6 +103,24 @@ export const Navbar = () => {
           <a className="text-gray-700 hover:text-indigo-700 block px-3 py-2 rounded-md text-base font-medium">
             Contact
           </a>{" "}
+          <a className="text-gray-700 hover:text-indigo-700 block px-3 py-2 rounded-md text-base font-medium">
+            Health Plan
+          </a>{" "}
+          <a className="text-gray-700 hover:text-indigo-700 block px-3 py-2 rounded-md text-base font-medium">
+            Blog
+          </a>{" "}
+          <Link
+            to="login"
+            className="text-gray-700 hover:text-indigo-700 block px-3 py-2 rounded-md text-base font-medium"
+          >
+            Log in
+          </Link>{" "}
+          <Link
+            to="signup"
+            className="text-gray-700 hover:text-indigo-700 block px-3 py-2 rounded-md text-base font-medium"
+          >
+            Sign Up
+          </Link>{" "}
         </div>
       </div>
     </nav>
