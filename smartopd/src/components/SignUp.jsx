@@ -243,14 +243,14 @@ export const CheckBoxes = () => {
             <div class="flex items-start mb-6">
               <div class="flex items-center h-5">
                 <input
-                  id="remember"
+                  id="remember3"
                   type="checkbox"
                   value=""
                   class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 "
                   required
                 />
               </div>
-              <label for="remember" class="ml-2 text-sm font-medium ">
+              <label for="remember3" class="ml-2 text-sm font-medium ">
                 Membership Terms of Service{" "}
               </label>
             </div>
@@ -271,14 +271,14 @@ export const CheckBoxes = () => {
             <div class="flex items-start mb-6">
               <div class="flex items-center h-5">
                 <input
-                  id="remember"
+                  id="remember2"
                   type="checkbox"
                   value=""
                   class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 "
                   required
                 />
               </div>{" "}
-              <label for="remember" class="ml-2 text-sm font-medium ">
+              <label for="remember2" class="ml-2 text-sm font-medium ">
                 Privacy Policy
               </label>
             </div>
@@ -288,14 +288,14 @@ export const CheckBoxes = () => {
             <div class="flex items-start mb-6">
               <div class="flex items-center h-5">
                 <input
-                  id="remember"
+                  id="remember1"
                   type="checkbox"
                   value=""
                   class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 "
                   required
                 />
               </div>
-              <label for="remember" class="ml-2 text-sm font-medium ">
+              <label for="remember1" class="ml-2 text-sm font-medium ">
                 Notice of HIPAA Privacy Practices
               </label>
             </div>
