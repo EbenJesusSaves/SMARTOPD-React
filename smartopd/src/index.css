@@ -18,19 +18,6 @@
 
 }
 
-@media screen and (max-width: 800px) {
-  .mainPage {
-    background-image: url('./images/backgroundImage.jpg');
-    background-size: cover;
-    height: 15rem !important;
-    background-color: aqua;
-    background-repeat: no-repeat;
-    height: auto;
-
-
-  }
-}
-
 
 
 
@@ -62,4 +49,31 @@
 
 .mbsc-scroller-wheel-item-2d .md-country-picker-item {
   transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 800px) {
+  .mainPage {
+    background-image: url('./images/backgroundImage.jpg');
+    background-size: cover;
+    height: 15rem !important;
+    background-color: aqua;
+    background-repeat: no-repeat;
+    height: auto;
+
+
+  }
+
+  .download {
+
+    background-size: cover;
+  }
 }
