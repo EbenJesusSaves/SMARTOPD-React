@@ -16,6 +16,7 @@ import { RiWaterFlashLine } from "react-icons/ri";
 import { CgGirl } from "react-icons/cg";
 import { MdFamilyRestroom } from "react-icons/md";
 import { BsHeartPulse } from "react-icons/bs";
+import { BiClinic } from "react-icons/bi";
 
 import { useIntersectionObserver } from "react-intersection-observer-hook";
 import { Navbar } from "../components/Navbar";
@@ -244,6 +245,26 @@ export const LandingPage = () => {
                     </p>
                     <p className="text-center font-bold">Cardiology</p>
                   </motion.div>
+                  <motion.div
+                    whileHover={{
+                      scale: 0.9,
+
+                      transition: {
+                        duration: 1,
+                        repeat: Infinity,
+                      },
+                    }}
+                    className="h-[150px] flex flex-col  justify-center items-center w-[200px] bg-transparent shadow-xl rounded-lg"
+                  >
+                    <p className="justify-center flex mb-2 content-center bg-green-300  h-10 w-10 rounded-full items-center">
+                      <BiClinic
+                        className="text-center"
+                        size="30"
+                        color="#e47d1d"
+                      />{" "}
+                    </p>
+                    <p className="text-center font-bold">clinical psychology</p>
+                  </motion.div>
                 </div>
               </div>
             </div>
@@ -262,7 +283,7 @@ export const LandingPage = () => {
           </div>{" "}
           <div className="flex justify-center  ">
             <div className="flex w-[80%] md:w-[60%] mt-10 justify-center flex-wrap-reverse content-center ">
-              <div className="w-auto md:w-1/2">
+              <div className="w-auto md:w-1/2 ">
                 <div className="">
                   <h4 className="font-brandFont mb-4 font-bold">
                     Virtual Doctor
@@ -384,7 +405,7 @@ export const LandingPage = () => {
                     The Wait for Quality Healthcare is Over!
                     <br />
                     <br />
-                    With CribMD, you can now talk to a licensed doctor online,
+                    With SmartOPD, you can now talk to a licensed doctor online,
                     <br />
                     through chat, audio call, or video conference and get
                     instant
