@@ -73,7 +73,7 @@ export const LandingPage = () => {
               advice
             </p>
           </div>
-          <div className="mt-10 flex justify-center bg-[#F5F9FF] p-20 ">
+          <div className="mt-10 flex justify-center bg-[#f5f9ffb0] p-20 ">
             <div className="container flex justify-center   ">
               <div className="flex  flex-wrap content-center justify-center">
                 <motion.div
@@ -106,7 +106,6 @@ export const LandingPage = () => {
                   <motion.div
                     whileHover={{
                       scale: 0.9,
-
                       transition: {
                         duration: 1,
                         repeat: Infinity,

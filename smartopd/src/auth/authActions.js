@@ -6,6 +6,9 @@ import {
 import { app } from "../firebaseConfig";
 
 import { child, getDatabase, ref, set, update } from "firebase/database";
+import { SuccessPopUp } from "../components/SweetAlert";
+import { useContext } from "react";
+import { MainContext } from "../context/ContextProvider";
 
 export const signUp = (
   firstName,
@@ -87,22 +90,27 @@ const createUser = async (
   return userData;
 };
 
-export const signIn = (email, password) => {
-  return async (dispatch) => {
-    const auth = getAuth(app);
+// export const signIn = (email, password) => {
+//   const auth = getAuth(app);
+//   let userEmail;
 
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed in
-        const user = userCredential.user;
-        console.log("hi");
-        // ...
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log("hi");
-        console.log(errorMessage);
-      });
-  };
-};
+//   const loginUser = signInWithEmailAndPassword(auth, email, password)
+//     .then((userCredential) => {
+//       // Signed in
+//       const user = userCredential.user;
+
+//       // ...
+//       SuccessPopUp("LogIn successfully", "Click okay to continue", "success");
+
+//       return user.email;
+//     })
+//     .catch((error) => {
+//       const errorCode = error.code;
+//       const errorMessage = error.message;
+//       console.log("hi");
+//       console.log(errorMessage);
+//       SuccessPopUp("LogIn Failed", errorMessage, "error");
+//       return null;
+//     });
+//   console.log(loginUser);
+// };
