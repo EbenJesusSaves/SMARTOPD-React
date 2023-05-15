@@ -1,8 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { SelectCountry } from "./CountryPicker";
 import { Link } from "react-router-dom";
+import { signUp } from "../auth/authActions";
 
 export const SignUp = () => {
+  const [firstName, setFirstName] = useState();
+  const [lastName, setLastName] = useState();
+  const [countryName, setCountryName] = useState();
+  const [phone, setPhone] = useState();
+  const [homeAddress, setHomeAddress] = useState();
+  const [aptFloor, setAptFloor] = useState();
+  const [email, setEmail] = useState();
+  const [dob, setDob] = useState();
+  const [password, setPassword] = useState();
+
+  // signUp(
+  //   "kwame",
+  //   "kofi",
+  //   "ghfna",
+  //   233459,
+  //   39548,
+  //   49784,
+  //   "k@gmail.cosm",
+  //   2023,
+  //   "kingfod111"
+  // );
+
+  console.log(firstName);
   return (
     <div>
       {" "}
@@ -33,6 +57,9 @@ export const SignUp = () => {
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  "
                     placeholder="John"
                     required
+                    onChange={(e) => {
+                      setFirstName(e.target.value);
+                    }}
                   />
                 </div>
                 <div>
@@ -48,6 +75,9 @@ export const SignUp = () => {
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                     placeholder="Doe"
                     required
+                    onChange={(e) => {
+                      setLastName(e.target.value);
+                    }}
                   />
                 </div>
                 <div>
