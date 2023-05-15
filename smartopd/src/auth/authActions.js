@@ -95,12 +95,14 @@ export const signIn = (email, password) => {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
+        console.log("hi");
         // ...
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(error);
+        console.log("hi");
+        console.log(errorMessage);
       });
   };
 };

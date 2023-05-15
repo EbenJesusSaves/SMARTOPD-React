@@ -5,6 +5,7 @@ import doctorPatient from "../images/one.jpg";
 import doctorOne from "../images/call.jpg";
 import pharmacy from "../images/two.jpg";
 import downloadApp from "../images/playStore.png";
+import "../utils/backgroudAnimation.css";
 
 import { motion, useInView, useAnimate } from "framer-motion";
 
@@ -34,7 +35,8 @@ export const LandingPage = () => {
   return (
     <>
       <Navbar />
-      <div className="container-fluid" style={{ overflow: "scroll" }}>
+
+      <div className="container-fluid main" style={{ overflow: "scroll" }}>
         <div className="flex justify-center content-center scroll-smooth ">
           <div className="container flex  justify-center align-middle  mainPage">
             <div className="container flex justify-start cursor-pointer  mx-6 md:w-2/3 lg:h-[48rem] my-10 md:my-0 lg:pt-[10rem] text-white">
@@ -433,8 +435,8 @@ export const LandingPage = () => {
                 </h4>
                 <p className="font-brandFont mb-4 ">
                   Book a same day appointment at your convenience
-                  <br /> either from our mobile app or web app and have a<br />{" "}
-                  secure chat with any of our licensed doctors.
+                  <br /> either from our mobile app or web app and have a
+                  <br /> secure chat with any of our licensed doctors.
                 </p>
               </div>
               <div className="mt-10 ms-[15rem]">
@@ -444,6 +446,21 @@ export const LandingPage = () => {
           </div>
         </div>
       </div>
+      <ul class="background">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
       <Footer />
     </>
   );
