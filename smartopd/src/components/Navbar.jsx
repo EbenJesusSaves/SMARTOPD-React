@@ -110,7 +110,7 @@ export const Navbar = () => {
       </div>
       <div className={`${isOpen ? "block " : "hidden"} sm:hidden `}>
         <div className="px-2  pb-3 space-y-2  ">
-          <a className="text-gray-700 text  hover:text-indigo-700 block px-3 py-2 rounded-md text-base font-medium">
+          {/* <a className="text-gray-700 text  hover:text-indigo-700 block px-3 py-2 rounded-md text-base font-medium">
             Home
           </a>
           <a className="text-gray-700 hover:text-indigo-700 block px-3 py-2 rounded-md text-base font-medium">
@@ -124,8 +124,8 @@ export const Navbar = () => {
           </a>{" "}
           <a className="text-gray-700 hover:text-indigo-700 block px-3 py-2 rounded-md text-base font-medium">
             Blog
-          </a>{" "}
-          {user && !user.email && (
+          </a>{" "} */}
+          {user === "" ? (
             <>
               <Link
                 to="login"
@@ -140,6 +140,14 @@ export const Navbar = () => {
                 Sign Up
               </Link>
             </>
+          ) : (
+            <button
+              className="bg-main-bg font-semibold text-white font-[Poppins] py-2 rounded-lg w-[96px]   hover:bg-main-bg
+    duration-500"
+              onClick={signOUt}
+            >
+              <Link to="/">log out</Link>
+            </button>
           )}
         </div>
       </div>
