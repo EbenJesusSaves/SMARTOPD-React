@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import countries from "i18n-iso-countries";
 // Import the languages you want to use
 import enLocale from "i18n-iso-countries/langs/en.json";
 import itLocale from "i18n-iso-countries/langs/it.json";
+import { MainContext } from "../context/ContextProvider";
 
 export function SelectCountry() {
   const [selectedCountry, setSelectedCountry] = useState("");
@@ -24,6 +25,12 @@ export function SelectCountry() {
     };
   });
 
+  const { setCountry, country } = useContext(MainContext);
+
+  useEffect(() => {
+    setCountry(selectedCountry);
+  }, [selectedCountry]);
+
   return (
     <div>
       <select
@@ -35,7 +42,7 @@ export function SelectCountry() {
         <option selected>Choose a country</option>
         {!!countryArr?.length &&
           countryArr.map(({ label, value }) => (
-            <option key={value} value={value}>
+            <option key={value} value={label}>
               {label}
             </option>
           ))}

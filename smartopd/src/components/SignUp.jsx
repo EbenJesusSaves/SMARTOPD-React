@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { SelectCountry } from "./CountryPicker";
 import { Link } from "react-router-dom";
 import { signUp } from "../auth/authActions";
+import { MainContext } from "../context/ContextProvider";
+import { SuccessPopUp } from "./SweetAlert";
 
 export const SignUp = () => {
   const [firstName, setFirstName] = useState();
   const [lastName, setLastName] = useState();
-  const [countryName, setCountryName] = useState();
+
   const [phone, setPhone] = useState();
   const [homeAddress, setHomeAddress] = useState();
   const [aptFloor, setAptFloor] = useState();
@@ -26,7 +28,8 @@ export const SignUp = () => {
   //   "kingfod111"
   // );
 
-  console.log(firstName);
+  const { country } = useContext(MainContext);
+
   return (
     <div>
       {" "}
@@ -103,6 +106,9 @@ export const SignUp = () => {
                     placeholder="123-45-678"
                     pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
                     required
+                    onChange={(e) => {
+                      setPhone(e.target.value);
+                    }}
                   />
                 </div>
                 <div>
@@ -118,6 +124,9 @@ export const SignUp = () => {
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                     placeholder="flowbite.com"
                     required
+                    onChange={(e) => {
+                      setHomeAddress(e.target.value);
+                    }}
                   />
                 </div>
                 <div>
@@ -133,6 +142,9 @@ export const SignUp = () => {
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                     placeholder=""
                     required
+                    onChange={(e) => {
+                      setAptFloor(e.target.value);
+                    }}
                   />
                 </div>
               </div>
@@ -149,6 +161,9 @@ export const SignUp = () => {
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                   placeholder="john.doe@company.com"
                   required
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
                 />
               </div>
               <div class="mb-6">
@@ -164,6 +179,9 @@ export const SignUp = () => {
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                   placeholder="john.doe@company.com"
                   required
+                  onChange={(e) => {
+                    setDob(e.target.value);
+                  }}
                 />
               </div>
               <div class="mb-6">
@@ -179,6 +197,9 @@ export const SignUp = () => {
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                   placeholder="•••••••••"
                   required
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                  }}
                 />
               </div>
               <div class="mb-6">
@@ -233,7 +254,22 @@ export const SignUp = () => {
                   </label>
                 </div>
               </div>
-              <Link to="/checkbox">
+              <Link
+                to="/checkbox"
+                onClick={() => {
+                  signUp(
+                    firstName,
+                    lastName,
+                    country,
+                    phone,
+                    homeAddress,
+                    aptFloor,
+                    email,
+                    dob,
+                    password
+                  );
+                }}
+              >
                 <button
                   type="submit"
                   class="text-white bg-[#FF0065] hover:bg-[#FF0065] focus:ring-4 focus:outline-none focus:ring-[#FF0065] font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center "
@@ -331,10 +367,16 @@ export const CheckBoxes = () => {
             </div>
 
             <button
+              onClick={() =>
+                SuccessPopUp(
+                  "Form Submitted Successfully",
+                  "Click okay to return"
+                )
+              }
               type="submit"
               class="text-white bg-[#FF0065] hover:bg-[#FF0065] focus:ring-4 focus:outline-none focus:ring-[#FF0065] font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center "
             >
-              Submit
+              <Link to="/"> Submit</Link>
             </button>
             <Link className="text-center " to="/login">
               <p className="text-[#FF0065]">Login</p>
