@@ -1,14 +1,47 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import loginImage from "../images/login.jpg";
-import { Link } from "react-router-dom";
-import { signIn } from "../auth/authActions";
-
+import { Link, useNavigate } from "react-router-dom";
+// import { signIn } from "../auth/authActions";
+import { redirect } from "react-router-dom";
+import { MainContext } from "../context/ContextProvider";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { SuccessPopUp } from "./SweetAlert";
+import { app } from "../firebaseConfig";
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { user, setUser } = useContext(MainContext);
 
-  console.log(email, password);
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (user && user.email) {
+      navigate("/");
+    }
+  }, [user]);
+
+  const signIn = (email, password) => {
+    const auth = getAuth(app);
+    let userEmail;
+
+    const loginUser = signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        // ...
+        SuccessPopUp("LogIn successfully", "Click okay to continue", "success");
+
+        setUser(user);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log("hi");
+        console.log(errorMessage);
+        SuccessPopUp("LogIn Failed", errorMessage, "error");
+        return null;
+      });
+  };
   return (
     <div className="flex flex-wrap container justify-center items-center  h-[100vh]">
       <div className=" flex  container justify-center items-center ">
@@ -64,10 +97,28 @@ export const Login = () => {
               Submit
             </button>
           </form>
-          <Link className="text-center " to="/signup">
-            <p className="text-[#FF0065]">Sign up</p>
-          </Link>
+
+          <p className="text-[#FF0065]">
+            <Link className="text-center" to="/signup">
+              Sign up
+            </Link>
+          </p>
         </div>
+        <ul class="background">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
       </div>
     </div>
   );

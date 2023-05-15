@@ -2,6 +2,7 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signOut,
 } from "firebase/auth";
 import { app } from "../firebaseConfig";
 
@@ -114,3 +115,14 @@ const createUser = async (
 //     });
 //   console.log(loginUser);
 // };
+
+export const signOUt = () => {
+  const auth = getAuth();
+  signOut(auth)
+    .then(() => {
+      SuccessPopUp("LogOut successfully", "Click okay to continue", "success");
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};

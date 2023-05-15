@@ -5,9 +5,9 @@ export const Footer = () => {
     <div className="container flex justify-center gap-10 border-t-[1px]  border-[#FF0065] flex-wrap">
       <div className=" w-[15rem]">
         <h1>
-          <span className="font-brandFont text-lg font-semibold">Virtual</span>
+          <span className="font-brandFont text-lg font-semibold">Smart</span>
           <span className="font-brandFont text-lg font-semibold text-[#FF0065]">
-            Care
+            OPD
           </span>
         </h1>
         <p>

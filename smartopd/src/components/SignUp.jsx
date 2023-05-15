@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { signUp } from "../auth/authActions";
 import { MainContext } from "../context/ContextProvider";
 import { SuccessPopUp } from "./SweetAlert";
+import "../utils/backgroudAnimation.css";
 
 export const SignUp = () => {
   const [firstName, setFirstName] = useState();
@@ -280,7 +281,22 @@ export const SignUp = () => {
               <Link className="text-center " to="/login">
                 <p className="text-[#FF0065]">Login</p>
               </Link>
-            </form>
+            </form>{" "}
+            <ul class="background">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -382,6 +398,21 @@ export const CheckBoxes = () => {
               <p className="text-[#FF0065]">Login</p>
             </Link>
           </form>
+          <ul class="background">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
         </div>
       </div>
     </div>

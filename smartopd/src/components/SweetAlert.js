@@ -3,12 +3,12 @@ import withReactContent from "sweetalert2-react-content";
 
 const MySwal = withReactContent(Swal);
 
-export const SuccessPopUp = (title, text) => {
-  console.log(text, title);
+export const SuccessPopUp = (title, text, icon) => {
+  console.log(icon);
   MySwal.fire({
     title: title,
     text: text,
-    icon: "success",
+    icon: icon,
     confirmButtonColor: "#30D158",
   });
 };

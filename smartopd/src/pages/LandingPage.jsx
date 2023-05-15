@@ -69,8 +69,8 @@ export const LandingPage = () => {
             </h1>
             <p className="mt-10 font-brandFont  text-center ">
               Get access to highly qualified doctors on SmartOPD <br />
-              Don't risk your health by relying on self-medication or amateur
-              advice
+              Don't risk your health by relying on self-medication, driving in
+              heavy traffic, and waiting in a long queue for medical care.
             </p>
           </div>
           <div className="mt-10 flex justify-center bg-[#f5f9ffb0] p-20 ">
@@ -272,7 +272,7 @@ export const LandingPage = () => {
                   </h4>
                   <p className="font-brandFont mb-3 ">
                     Stay on top of your health by letting us <br /> bring our
-                    verified doctor(s) to you <br />
+                    verified nurse(s) to you <br />
                     in-person.
                   </p>
                 </div>
@@ -304,6 +304,17 @@ export const LandingPage = () => {
                     Get access to an affordable selection of
                     <br /> health plans for yourself, your family, or
                     <br /> employees.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-brandFont font-bold mb-4 ">
+                    Online Laboratory Service
+                  </h4>
+                  <p className="font-brandFont mb-4 ">
+                    Your lab samples will be taken from the comfort of your home
+                    or office and result will be delivered to you online. Our
+                    Doctors will call you to discuss the findings and dispense
+                    drugs.
                   </p>
                 </div>
               </div>

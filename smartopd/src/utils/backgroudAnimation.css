@@ -20,6 +20,7 @@
     padding: 0;
     background: #ffffff00;
     overflow: hidden;
+    z-index: -1;
 }
 
 .background li {
@@ -28,7 +29,7 @@
     left: 45vw;
     width: 10px;
     height: 10px;
-    border: solid 1px #e5e5e5;
+    border: solid 1px #c2ec0471;
     color: transparent;
     transform-origin: top left;
     transform: scale(0) rotate(0deg) translate(-50%, -50%);
@@ -39,7 +40,7 @@
     animation-delay: 0s;
     left: 52vw;
     top: 65vh;
-    border-color: #ffffff;
+    border-color: #1294ff70;
 }
 
 .background li:nth-child(1) {
@@ -84,7 +85,7 @@
     animation-delay: 14s;
     left: 64vw;
     top: 84vh;
-    border-color: #ffffff;
+    border-color: #3aff5b60;
 }
 
 .background li:nth-child(8) {
