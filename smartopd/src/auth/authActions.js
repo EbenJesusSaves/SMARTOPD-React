@@ -1,4 +1,8 @@
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 import { app } from "../firebaseConfig";
 
 import { child, getDatabase, ref, set, update } from "firebase/database";
@@ -81,4 +85,22 @@ const createUser = async (
     console.log(error.code);
   }
   return userData;
+};
+
+export const signIn = (email, password) => {
+  return async (dispatch) => {
+    const auth = getAuth(app);
+
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(error);
+      });
+  };
 };
