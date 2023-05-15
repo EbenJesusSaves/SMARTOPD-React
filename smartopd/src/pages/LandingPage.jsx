@@ -260,7 +260,7 @@ export const LandingPage = () => {
             </p>
           </div>{" "}
           <div className="flex justify-center  ">
-            <div className="flex w-[60%] mt-10 justify-center flex-wrap-reverse content-center ">
+            <div className="flex w-[80%] md:w-[60%] mt-10 justify-center flex-wrap-reverse content-center ">
               <div className="w-auto md:w-1/2">
                 <div className="">
                   <h4 className="font-brandFont mb-4 font-bold">
