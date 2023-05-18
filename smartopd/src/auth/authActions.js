@@ -80,6 +80,10 @@ const createUser = async (
     signUpDate: new Date().toISOString(),
   };
 
+  //this sets userData to the localStorage
+  localStorage.setItem(`userData${userId}`, JSON.stringify(userData));
+  console.log(firstName);
+
   const db = getDatabase();
   const dbRef = ref(db);
   const childRef = child(dbRef, `users/${userId}`);

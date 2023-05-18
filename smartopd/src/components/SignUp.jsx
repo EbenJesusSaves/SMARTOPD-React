@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { SelectCountry } from "./CountryPicker";
 import { Link } from "react-router-dom";
 import { signUp } from "../auth/authActions";
@@ -17,6 +17,7 @@ export const SignUp = () => {
   const [email, setEmail] = useState();
   const [dob, setDob] = useState();
   const [password, setPassword] = useState();
+  const [userData, setUserData] = useState();
 
   // signUp(
   //   "kwame",
@@ -31,6 +32,15 @@ export const SignUp = () => {
   // );
 
   const { country } = useContext(MainContext);
+
+  const UserData = {
+    firstName,
+    lastName,
+    email,
+    phone,
+  };
+
+  const userFuc = () => {};
 
   return (
     <div>
@@ -270,6 +280,7 @@ export const SignUp = () => {
                     dob,
                     password
                   );
+                  userFuc();
                 }}
               >
                 <button
@@ -283,21 +294,6 @@ export const SignUp = () => {
                 <p className="text-[#FF0065]">Login</p>
               </Link>
             </form>{" "}
-            <ul class="background">
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
           </div>
         </div>
       </div>
@@ -399,21 +395,6 @@ export const CheckBoxes = () => {
               <p className="text-[#FF0065]">Login</p>
             </Link>
           </form>
-          <ul class="background">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
         </div>
       </div>
     </div>
