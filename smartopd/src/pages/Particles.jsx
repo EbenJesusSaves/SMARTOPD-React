@@ -40,7 +40,7 @@ export const Particle = () => {
             },
           },
           opacity: {
-            value: 0.8,
+            value: 0.7,
             random: false,
             anim: {
               enable: false,
