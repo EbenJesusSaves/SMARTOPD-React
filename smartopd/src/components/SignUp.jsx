@@ -5,6 +5,7 @@ import { signUp } from "../auth/authActions";
 import { MainContext } from "../context/ContextProvider";
 import { SuccessPopUp } from "./SweetAlert";
 import "../utils/backgroudAnimation.css";
+import { Particle } from "../pages/Particles";
 
 export const SignUp = () => {
   const [firstName, setFirstName] = useState();
@@ -33,7 +34,7 @@ export const SignUp = () => {
 
   return (
     <div>
-      {" "}
+      <Particle />
       <div className="flex flex-wrap container justify-center items-center  h-[100vh]">
         <div className=" flex  container justify-center items-center ">
           <div className=" items-center justify-center p-10  shadow-lg">

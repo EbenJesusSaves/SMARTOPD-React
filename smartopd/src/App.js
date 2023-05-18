@@ -8,6 +8,7 @@ import ErrorPage from "./components/ErrorPage";
 import { Login } from "./components/Login";
 import { CheckBoxes, SignUp } from "./components/SignUp";
 import { ContextProvider } from "./context/ContextProvider";
+import { DashBoard } from "./pages/DashBoard";
 
 const router = createBrowserRouter([
   { path: "/", element: <LandingPage />, errorElement: <ErrorPage /> },
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: "checkbox",
     element: <CheckBoxes />,
+  },
+  {
+    path: "dashBoard",
+    element: <DashBoard />,
   },
 ]);
 

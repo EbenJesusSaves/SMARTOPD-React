@@ -8,6 +8,7 @@ import { MainContext } from "../context/ContextProvider";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { SuccessPopUp } from "./SweetAlert";
 import { app } from "../firebaseConfig";
+import { Particle } from "../pages/Particles";
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -104,21 +105,7 @@ export const Login = () => {
             </Link>
           </p>
         </div>
-        <ul class="background">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+        <Particle />
       </div>
     </div>
   );

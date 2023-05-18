@@ -5,7 +5,6 @@ import doctorPatient from "../images/one.jpg";
 import doctorOne from "../images/call.jpg";
 import pharmacy from "../images/two.jpg";
 import downloadApp from "../images/playStore.png";
-import "../utils/backgroudAnimation.css";
 
 import { motion, useInView, useAnimate } from "framer-motion";
 
@@ -22,6 +21,7 @@ import { useIntersectionObserver } from "react-intersection-observer-hook";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { Link } from "react-router-dom";
+import { Particle } from "./Particles";
 
 export const LandingPage = () => {
   const [scope, animate] = useAnimate();
@@ -37,7 +37,12 @@ export const LandingPage = () => {
     <>
       <Navbar />
 
-      <div className="container-fluid main" style={{ overflow: "scroll" }}>
+      <div
+        className="container-fluid large-header"
+        id="large-header"
+        style={{ overflow: "scroll" }}
+      >
+        <Particle />
         <div className="flex justify-center content-center scroll-smooth ">
           <div className="container flex  justify-center align-middle  mainPage">
             <div className="container flex justify-start cursor-pointer  mx-6 md:w-2/3 lg:h-[48rem] my-10 md:my-0 lg:pt-[10rem] text-white">
@@ -492,6 +497,7 @@ export const LandingPage = () => {
         <li></li>
         <li></li>
       </ul>
+
       <Footer />
     </>
   );
