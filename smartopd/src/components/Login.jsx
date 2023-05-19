@@ -9,10 +9,13 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { SuccessPopUp } from "./SweetAlert";
 import { app } from "../firebaseConfig";
 import { Particle } from "../pages/Particles";
+
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { user, setUser } = useContext(MainContext);
+
+  // console.log(user);
 
   const navigate = useNavigate();
   useEffect(() => {
@@ -25,12 +28,13 @@ export const Login = () => {
     const auth = getAuth(app);
     let userEmail;
 
-    const loginUser = signInWithEmailAndPassword(auth, email, password)
+    signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
         // ...
         SuccessPopUp("LogIn successfully", "Click okay to continue", "success");
+        localStorage.setItem(`userData`, JSON.stringify(user));
 
         setUser(user);
       })
@@ -42,6 +46,8 @@ export const Login = () => {
         SuccessPopUp("LogIn Failed", errorMessage, "error");
         return null;
       });
+
+    console.log(user && user.email);
   };
   return (
     <div className="flex flex-wrap container justify-center items-center  h-[100vh]">

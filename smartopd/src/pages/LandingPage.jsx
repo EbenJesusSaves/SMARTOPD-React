@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useContext } from "react";
 import { Button } from "../utils/Button";
 import doctorImg from "../images/ddd.png";
 import doctorPatient from "../images/one.jpg";
@@ -13,10 +13,18 @@ import { Footer } from "../components/Footer";
 import { Link } from "react-router-dom";
 import { Particle } from "./Particles";
 import { ServiceCard } from "./ServiceCard";
+import { MainContext } from "../context/ContextProvider";
 
 export const LandingPage = () => {
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope);
+  const { user, setUser } = useContext(MainContext);
+
+  useEffect(() => {
+    const items = JSON.parse(localStorage.getItem(`userData`));
+
+    setUser(items);
+  }, []);
 
   useEffect(() => {
     if (isInView) {

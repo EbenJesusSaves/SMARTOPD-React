@@ -6,8 +6,16 @@ import { signOUt } from "../auth/authActions";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const { user, setUser } = useContext(MainContext);
   const toggleMenu = () => setIsOpen(!isOpen);
+
+  console.log(user);
+
+  const logUserOUt = () => {
+    signOUt();
+    setUser("");
+    localStorage.removeItem("userData");
+  };
 
   return (
     <nav className="bg-white shadow-sm">
@@ -39,7 +47,7 @@ export const Navbar = () => {
                 <button
                   className="bg-main-bg font-semibold text-white font-[Poppins] py-2 rounded-lg w-[96px]   hover:bg-main-bg
     duration-500"
-                  onClick={signOUt}
+                  onClick={logUserOUt}
                 >
                   <Link to="/">log out</Link>
                 </button>

@@ -15,11 +15,7 @@ export const DashBoard = () => {
   //   console.log(result);
   // };
 
-  useEffect(() => {
-    const items = JSON.parse(localStorage.getItem(`userData`));
-    setUser(items);
-  }, [user]);
-
+  const { user } = useContext(MainContext);
   return (
     <>
       <Navbar />

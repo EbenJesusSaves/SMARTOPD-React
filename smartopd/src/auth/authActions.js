@@ -53,7 +53,7 @@ export const signUp = (
 };
 
 // Creating a database for the users
-const createUser = async (
+export const createUser = async (
   firstName,
   lastName,
   country,
@@ -81,7 +81,7 @@ const createUser = async (
   };
 
   //this sets userData to the localStorage
-  localStorage.setItem(`userData${userId}`, JSON.stringify(userData));
+  localStorage.setItem(`userData`, JSON.stringify(userData));
   console.log(firstName);
 
   const db = getDatabase();
