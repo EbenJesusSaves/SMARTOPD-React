@@ -4,7 +4,8 @@ import doctorImg from "../images/ddd.png";
 import doctorPatient from "../images/one.jpg";
 import doctorOne from "../images/call.jpg";
 import pharmacy from "../images/two.jpg";
-import downloadApp from "../images/playStore.png";
+import downloadApp from "../images/download-on-the-app-store-badge_us.svg";
+import downloadSpp from "../images/google-play-badge-logo-svgrepo-com(1).svg";
 
 import { motion, useInView, useAnimate } from "framer-motion";
 
@@ -274,9 +275,8 @@ export const LandingPage = () => {
             </div>
           </div>
           <div className="download lg:h-[30rem] my-20 flex items-center  justify-center">
-            <div className="w-auto md:w-1/2   "></div>
             <div className="w-auto md:w-1/2 flex flex-col ">
-              <div className="  rounded ml-10">
+              <div className="  rounded ml-10 ">
                 <h4 className="font-brandFont text-xl text-white font-bold mb-4 ">
                   Your Doctor On The Go
                 </h4>
@@ -286,28 +286,15 @@ export const LandingPage = () => {
                   <br /> secure chat with any of our licensed doctors.
                 </p>
               </div>
-              <div className="mt-10 ms-[15rem]">
+              <div className="mt-10 ms-[3rem] flex gap-4">
                 <img src={downloadApp} width="192px" />
+                <img src={downloadSpp} width="192px" />
               </div>
             </div>
+            <div className="w-auto md:w-1/2   "></div>
           </div>
         </div>
       </div>
-      <ul class="background">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
 
       <Footer />
     </>
