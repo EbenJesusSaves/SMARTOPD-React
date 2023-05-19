@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import "../utils/avatar.css";
-import { Navbar } from "../components/Navbar";
+import { NavbarForDashBoard } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { ServiceCard } from "./ServiceCard";
 
@@ -18,7 +18,7 @@ export const DashBoard = () => {
   const { user } = useContext(MainContext);
   return (
     <>
-      <Navbar />
+      <NavbarForDashBoard />
       <Particle />
       <div>
         <div className="container flex flex-wrap justify-center ">

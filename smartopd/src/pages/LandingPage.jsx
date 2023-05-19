@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 import { Particle } from "./Particles";
 import { ServiceCard } from "./ServiceCard";
 import { MainContext } from "../context/ContextProvider";
+import AnimatedTextCharacter from "../utils/AnimatedTextWord";
 
 export const LandingPage = () => {
   const [scope, animate] = useAnimate();
@@ -47,7 +48,12 @@ export const LandingPage = () => {
             <div className="container flex justify-start cursor-pointer  mx-6 md:w-2/3 lg:h-[48rem] my-10 md:my-0 lg:pt-[10rem] text-white">
               <div className="">
                 <motion.h1 className=" xl:text-6xl lg:text-4xl text-center xl:text-start  font-semibold font-brandFont md:text-2xl ">
-                  The digital health consultation platform just for you{" "}
+                  {" "}
+                  <AnimatedTextCharacter
+                    text="The digital health 
+                    consultation platform 
+                    just for you"
+                  />
                 </motion.h1>
                 <p className="font-semibold md:text-xl my-3 hidden md:block md:my-10">
                   Skip the waiting room and instantly connect with verified
