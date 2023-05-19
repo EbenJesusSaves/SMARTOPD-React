@@ -54,8 +54,8 @@ export const Navbar = () => {
                     <Avatar
                       name={user && user.email}
                       round
-                      size="50"
-                      color={"pink"}
+                      size="45"
+                      color={"#FF0065"}
                       className="cursor-pointer"
                     />
                   </Link>
