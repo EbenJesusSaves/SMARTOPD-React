@@ -40,6 +40,13 @@ export const SignUp = () => {
     phone,
   };
 
+  const { user, setUser } = useContext(MainContext);
+
+  // const userDataFuc = async () => {
+  //   const result = await createUser();
+  //   console.log(result);
+  // };
+
   const userFuc = () => {};
 
   return (

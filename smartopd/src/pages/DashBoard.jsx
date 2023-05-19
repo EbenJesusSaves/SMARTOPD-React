@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "../utils/avatar.css";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
@@ -6,16 +6,19 @@ import { ServiceCard } from "./ServiceCard";
 
 import weclDoc from "../images/newStock.png";
 import { Particle } from "./Particles";
+import { createUser } from "../auth/authActions";
+import { MainContext } from "../context/ContextProvider";
 
 export const DashBoard = () => {
-  const [items, setItems] = useState([]);
+  // const userDataFuc = async () => {
+  //   const result = await createUser();
+  //   console.log(result);
+  // };
 
   useEffect(() => {
-    const items = JSON.parse(localStorage.getItem(`userData${userId}`));
-    if (items) {
-      setItems(items);
-    }
-  }, []);
+    const items = JSON.parse(localStorage.getItem(`userData`));
+    setUser(items);
+  }, [user]);
 
   return (
     <>
@@ -25,7 +28,7 @@ export const DashBoard = () => {
         <div className="container flex flex-wrap justify-center ">
           <div className="w-[90%] lg:w-2/3">
             <div className="text-3xl lg:text-5xl font-bold py-10 ">
-              Welcome to SmartODP
+              Welcome to SmartODP {user && user.firstName}
             </div>
           </div>
           <div className="w-[90%] lg:w-1/3 bg-pink-200 rounded">
