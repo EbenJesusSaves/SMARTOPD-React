@@ -6,9 +6,7 @@ import { signOUt } from "../auth/authActions";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { user } = useContext(MainContext);
 
-  console.log(user && user.email);
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
