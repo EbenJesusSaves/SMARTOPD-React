@@ -140,7 +140,16 @@ export const Navbar = () => {
           <a className="text-gray-700 hover:text-indigo-700 block px-3 py-2 rounded-md text-base font-medium">
             Blog
           </a>{" "} */}
-          {user === "" ? (
+          {user && user !== "" ? (
+            <>
+              <button
+                className="bg-main-bg font-semibold text-white font-[Poppins] py-2 rounded-lg w-[96px]   hover:bg-main-bg
+    duration-500"
+              >
+                <Link to="/dashboard">Dashboard</Link>
+              </button>
+            </>
+          ) : (
             <>
               <Link
                 to="login"
@@ -155,13 +164,6 @@ export const Navbar = () => {
                 Sign Up
               </Link>
             </>
-          ) : (
-            <button
-              className="bg-main-bg font-semibold text-white font-[Poppins] py-2 rounded-lg w-[96px]   hover:bg-main-bg
-    duration-500"
-            >
-              <Link to="/dashboard"> Dashboard</Link>
-            </button>
           )}
         </div>
       </div>
