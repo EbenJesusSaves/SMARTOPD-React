@@ -75,7 +75,7 @@ export const Navbar = () => {
                       className="bg-main-bg font-semibold text-white font-[Poppins] py-2 rounded-lg w-[96px]   hover:bg-main-bg
     duration-500"
                     >
-                      Sign up
+                      Sign up1
                     </button>
                   </Link>
                 </>

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { SelectCountry } from "./CountryPicker";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { signUp } from "../auth/authActions";
 import { MainContext } from "../context/ContextProvider";
 import { SuccessPopUp } from "./SweetAlert";
@@ -17,7 +17,8 @@ export const SignUp = () => {
   const [email, setEmail] = useState();
   const [dob, setDob] = useState();
   const [password, setPassword] = useState();
-  const [userData, setUserData] = useState();
+  const [confirmPassword, setConfirmPassword] = useState();
+  const [checkPassword, setCheckPassword] = useState(true);
 
   // signUp(
   //   "kwame",
@@ -42,12 +43,23 @@ export const SignUp = () => {
 
   const { user, setUser } = useContext(MainContext);
 
+  useEffect(() => {
+    if (password === confirmPassword && password.length >= 6) {
+      setCheckPassword(false);
+    } else {
+      setCheckPassword(true);
+    }
+  }, [password, confirmPassword]);
+
   // const userDataFuc = async () => {
   //   const result = await createUser();
   //   console.log(result);
   // };
 
-  const userFuc = () => {};
+  const navigate = useNavigate();
+  const userFuc = () => {
+    navigate("/checkbox");
+  };
 
   return (
     <div>
@@ -214,7 +226,7 @@ export const SignUp = () => {
                   type="password"
                   id="password"
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                  placeholder="•••••••••"
+                  placeholder="Password must be at least six characters"
                   required
                   onChange={(e) => {
                     setPassword(e.target.value);
@@ -234,6 +246,9 @@ export const SignUp = () => {
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                   placeholder="•••••••••"
                   required
+                  onChange={(e) => {
+                    setConfirmPassword(e.target.value);
+                  }}
                 />
               </div>
               <div>
@@ -273,8 +288,8 @@ export const SignUp = () => {
                   </label>
                 </div>
               </div>
-              <Link
-                to="/checkbox"
+
+              <button
                 onClick={() => {
                   signUp(
                     firstName,
@@ -289,14 +304,13 @@ export const SignUp = () => {
                   );
                   userFuc();
                 }}
+                disabled={checkPassword}
+                type="submit"
+                class="text-white bg-[#FF0065] disabled:bg-slate-200 hover:bg-[#FF0065] focus:ring-4 focus:outline-none focus:ring-[#FF0065] font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center "
               >
-                <button
-                  type="submit"
-                  class="text-white bg-[#FF0065] hover:bg-[#FF0065] focus:ring-4 focus:outline-none focus:ring-[#FF0065] font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center "
-                >
-                  next
-                </button>
-              </Link>
+                next
+              </button>
+
               <Link className="text-center " to="/login">
                 <p className="text-[#FF0065]">Login</p>
               </Link>
