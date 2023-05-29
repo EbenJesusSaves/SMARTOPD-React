@@ -266,7 +266,6 @@ export const SignUp = () => {
                       type="checkbox"
                       value=""
                       class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 "
-                      required
                     />
                   </div>
                   <label for="remember" class="ml-2 text-sm font-medium ">
@@ -280,7 +279,6 @@ export const SignUp = () => {
                       type="checkbox"
                       value=""
                       class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 "
-                      required
                     />
                   </div>
                   <label for="remember" class="ml-2 text-sm font-medium ">
@@ -347,7 +345,6 @@ export const CheckBoxes = () => {
                   type="checkbox"
                   value=""
                   class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 "
-                  required
                 />
               </div>
               <label for="remember3" class="ml-2 text-sm font-medium ">
@@ -361,7 +358,6 @@ export const CheckBoxes = () => {
                   type="checkbox"
                   value=""
                   class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 "
-                  required
                 />
               </div>{" "}
               <label for="remember" class="ml-2 text-sm font-medium ">
@@ -375,7 +371,6 @@ export const CheckBoxes = () => {
                   type="checkbox"
                   value=""
                   class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 "
-                  required
                 />
               </div>{" "}
               <label for="remember2" class="ml-2 text-sm font-medium ">
@@ -392,7 +387,6 @@ export const CheckBoxes = () => {
                   type="checkbox"
                   value=""
                   class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 "
-                  required
                 />
               </div>
               <label for="remember1" class="ml-2 text-sm font-medium ">
