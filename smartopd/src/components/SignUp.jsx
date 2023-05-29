@@ -44,7 +44,7 @@ export const SignUp = () => {
   const { user, setUser } = useContext(MainContext);
 
   useEffect(() => {
-    if (password === confirmPassword && password.length >= 6) {
+    if (password && password === confirmPassword && password.length >= 6) {
       setCheckPassword(false);
     } else {
       setCheckPassword(true);

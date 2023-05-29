@@ -75,7 +75,7 @@ export const Navbar = () => {
                       className="bg-main-bg font-semibold text-white font-[Poppins] py-2 rounded-lg w-[96px]   hover:bg-main-bg
     duration-500"
                     >
-                      Sign up1
+                      Sign up
                     </button>
                   </Link>
                 </>
@@ -152,13 +152,13 @@ export const Navbar = () => {
           ) : (
             <>
               <Link
-                to="login"
+                to="/login"
                 className="text-gray-700 hover:text-indigo-700 block px-3 py-2 rounded-md text-base font-medium"
               >
                 Log in
               </Link>{" "}
               <Link
-                to="signup"
+                to="/signup"
                 className="text-gray-700 hover:text-indigo-700 block px-3 py-2 rounded-md text-base font-medium"
               >
                 Sign Up
@@ -307,13 +307,13 @@ export const NavbarForDashBoard = () => {
           {user === "" ? (
             <>
               <Link
-                to="login"
+                to="/login"
                 className="text-gray-700 hover:text-indigo-700 block px-3 py-2 rounded-md text-base font-medium"
               >
                 Log in
               </Link>{" "}
               <Link
-                to="signup"
+                to="/signup"
                 className="text-gray-700 hover:text-indigo-700 block px-3 py-2 rounded-md text-base font-medium"
               >
                 Sign Up
