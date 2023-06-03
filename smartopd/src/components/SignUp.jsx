@@ -202,7 +202,7 @@ export const SignUp = () => {
                   for="email"
                   class="block mb-2 text-sm font-medium text-gray-900 "
                 >
-                  Date of Birth
+                  Date of Birth.
                 </label>
                 <input
                   type="date"
